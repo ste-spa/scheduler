@@ -201,13 +201,23 @@ function generateDiv(task) {
   const taskDiv = document.createElement('div');
   taskDiv.classList.add('task');
   taskDiv.id = `task${task.id}`;
+  const arrivalTimeContainer = document.createElement('div');
+  arrivalTimeContainer.classList.add('arrivalTimeContainer');
+  arrivalTimeContainer.innerText = "Arrival Time : ";
+  const arrivalTime = document.createElement('span');
+  arrivalTime.classList.add('arrivalTime');
+  arrivalTime.innerText =  new Date(task.arrivalTime).toISOString();
+  arrivalTimeContainer.appendChild(arrivalTime);
   const name = document.createElement('div');
   name.classList.add('taskId');
   name.innerText = task.name;
   const runTime = document.createElement('div');
   runTime.classList.add('runTime');
   runTime.innerText = "Duration: " + task.timeRequired + 's';
-  taskDiv.append(...[name, runTime]);
+  const priority = document.createElement('div');
+  priority.classList.add('priority');
+  priority.innerText = "Priority: " + task.priority;
+  taskDiv.append(...[name, arrivalTimeContainer, runTime, priority]);
   tasksContainer.appendChild(taskDiv);
 }
 
