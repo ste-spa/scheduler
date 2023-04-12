@@ -1,0 +1,132 @@
+/* Set global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.title {
+  font-size:36px; 
+  text-transform:uppercase; 
+  text-align: left;
+  margin: auto;
+  white-space:nowrap;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 5px;
+ }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-table;
+  justify-content: center;
+  }
+
+#generate-tasks {
+  background-color: #C7A84C;
+}
+
+#generate-tasks:hover {
+  background-color: #ffd061;
+}
+
+#start {
+  background-color: #4CAF50;
+}
+
+#start:hover {
+  background-color: #0bf038;
+}
+
+#reset {
+  background-color: #B54C48;
+}
+#reset:hover {
+  background-color: #fc0606;
+}
+
+
+/* Style task container */
+
+.tasks-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.task {
+  height: 100px;
+  width: 100px;
+  background-color: #4C86C7;
+  color: #f2f2f2;
+  text-align: center;
+  line-height: normal;
+  font-size: medium;
+  border-radius: 5%;
+  margin: 5%;
+  justify-content: stretch;
+  align-items: normal;
+  padding: 10 px;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+
+.statistics-container {
+  display: block;
+  /* option in case the statistic shown after execution
+  display: none; */
+}
+
+
+.statistics-container span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.destroy-me {
+  background-color: green;
+  position: relative;
+  animation: destroy 0.05s ease forwards;
+  animation-delay: 0.05s
+}
+
+@keyframes destroy {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.running{
+  background-color: yellow;
+}
