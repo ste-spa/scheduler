@@ -70,6 +70,13 @@ button {
   background-color: #fc0606;
 }
 
+#readme {
+  background-color: #212121;
+}
+#readme:hover {
+  background-color: #525252;
+}
+
 /* Style task container */
 
 .tasks-container {

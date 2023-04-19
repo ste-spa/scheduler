@@ -8,6 +8,7 @@ const generateTasksButton = document.getElementById("generate-tasks");
 const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
 const continuousCheckbox = document.getElementById("continuous");
+const readmeButton = document.getElementById("readme");
 
 // Array to store tasks
 let tasks = [];
@@ -286,3 +287,7 @@ function disableStartButton() {
 function enableStartButton() {
   startButton.removeAttribute("disabled");
 }
+
+readmeButton.addEventListener("click", function () {
+  window.open("readme.html", "_blank");
+});
