@@ -81,8 +81,8 @@ button {
 }
 
 .task {
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
   background-color: #4C86C7;
   color: #f2f2f2;
   text-align: center;
@@ -99,14 +99,17 @@ button {
 
 .statistics-container {
   display: block;
-  /* option in case the statistic shown after execution
-  display: none; */
+
 }
 
 
 .statistics-container span {
   font-size: 18px;
   font-weight: bold;
+}
+
+.bold {
+  font-weight: bolder;
 }
 
 .destroy-me {
