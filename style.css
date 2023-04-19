@@ -5,27 +5,29 @@
   padding: 0;
 }
 
-html,body {
+html,
+body {
   height: 100%;
 }
 
 body {
   background-color: #f2f2f2;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .title {
-  font-size:36px; 
-  text-transform:uppercase; 
+  font-size: 36px;
+  text-transform: uppercase;
   text-align: left;
   margin: auto;
-  white-space:nowrap;
+  white-space: nowrap;
   display: inline-block;
   border: 2px solid black;
   padding: 5px;
- }
+}
 
 .container {
   max-width: 800px;
@@ -43,10 +45,10 @@ button {
   cursor: pointer;
   display: inline-table;
   justify-content: center;
-  }
+}
 
 #generate-tasks {
-  background-color: #C7A84C;
+  background-color: #c7a84c;
 }
 
 #generate-tasks:hover {
@@ -54,7 +56,7 @@ button {
 }
 
 #start {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 #start:hover {
@@ -62,12 +64,11 @@ button {
 }
 
 #reset {
-  background-color: #B54C48;
+  background-color: #b54c48;
 }
 #reset:hover {
   background-color: #fc0606;
 }
-
 
 /* Style task container */
 
@@ -83,7 +84,7 @@ button {
 .task {
   height: 140px;
   width: 140px;
-  background-color: #4C86C7;
+  background-color: #4c86c7;
   color: #f2f2f2;
   text-align: center;
   line-height: normal;
@@ -96,12 +97,9 @@ button {
   box-shadow: 0 0 0 2px black inset;
 }
 
-
 .statistics-container {
   display: block;
-
 }
-
 
 .statistics-container span {
   font-size: 18px;
@@ -116,7 +114,7 @@ button {
   background-color: green;
   position: relative;
   animation: destroy 0.05s ease forwards;
-  animation-delay: 0.05s
+  animation-delay: 0.05s;
 }
 
 @keyframes destroy {
@@ -130,6 +128,6 @@ button {
   }
 }
 
-.running{
+.running {
   background-color: yellow;
 }

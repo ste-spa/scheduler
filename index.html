@@ -2,56 +2,58 @@
 <html>
   <head>
     <title>Task Scheduling Algorithms</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1 class="title">Task Scheduling Algorithms</h1>
       <div class="options">
-        <br>
+        <br />
         <h2>Choose algorithm</h2>
         <div class="radio-buttons">
-          <input type="radio" id="fcfs" name="algorithm" value="fcfs" checked>
-          <label for="fcfs">First-Come, First-Served (FCFS)</label><br>
-          <input type="radio" id="sjf" name="algorithm" value="sjf">
-          <label for="sjf">Shortest Job First (SJF)</label><br>
-          <input type="radio" id="prio" name="algorithm" value="prio">
-          <label for="prio">Priority Scheduling (PS)</label><br>
-          <input type="radio" id="rr" name="algorithm" value="rr">
+          <input type="radio" id="fcfs" name="algorithm" value="fcfs" checked />
+          <label for="fcfs">First-Come, First-Served (FCFS)</label><br />
+          <input type="radio" id="sjf" name="algorithm" value="sjf" />
+          <label for="sjf">Shortest Job First (SJF)</label><br />
+          <input type="radio" id="prio" name="algorithm" value="prio" />
+          <label for="prio">Priority Scheduling (PS)</label><br />
+          <input type="radio" id="rr" name="algorithm" value="rr" />
           <label for="rr">Round-robin (RR)</label>
-          <label for ='rr'>with the following</label>
+          <label for="rr">with the following</label>
           <label for="quantum">Quantum / Slot</label>
-          <input type="number" id="quantum" name="quantum" value="1">
-          </div>
-          <br>
-          <h2>Run time</h2>
+          <input type="number" id="quantum" name="quantum" value="1" />
+        </div>
+        <br />
+        <h2>Run time</h2>
         <div class="run-time">
           <label for="run-time">Set running time (in units)</label>
-          <input type="number" id="run-time" name="run-time" value="10">
+          <input type="number" id="run-time" name="run-time" value="10" />
         </div>
-        <br>
+        <br />
         <div class="button">
           <button id="generate-tasks">Generate tasks</button>
           <button id="start">Start</button>
           <button id="reset">Reset</button>
         </div>
         <div class="checkbox">
-          <input type="checkbox" id="continuous" name="continuous">
+          <input type="checkbox" id="continuous" name="continuous" />
           <label for="continuous">Continue execution</label>
         </div>
       </div>
       <div class="tasks-container" id="tasks-container"></div>
-      <div class="statistics-container" id="statistics-container">
-      </div>
-      <br>
+      <div class="statistics-container" id="statistics-container"></div>
+      <br />
       <footer>
-        <p><em>Created by: Alan Kanjo, Julian Strohm, Lukas Tomanek, Paul Kunz & Steffen Spatzek (WI22A)</em></p>
+        <p>
+          <em
+            >Created by: Alan Kanjo, Julian Strohm, Lukas Tomanek, Paul Kunz &
+            Steffen Spatzek (WI22A)</em
+          >
+        </p>
       </footer>
     </div>
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
-

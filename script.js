@@ -245,7 +245,6 @@ resetButton.addEventListener("click", function () {
   updateStatistics();
 });
 
-
 // Function to update the statistics
 function updateStatistics(statisticsContainer) {
   // Clear the statistics container
@@ -255,15 +254,16 @@ function updateStatistics(statisticsContainer) {
   numTasksElement.textContent = "Number of not started tasks: " + tasks.length;
   numTasksElement.classList.add("bold");
   const finishedTasksElement = document.createElement("p");
-  finishedTasksElement.textContent = "Number of finished tasks: " + finishedTasks;
+  finishedTasksElement.textContent =
+    "Number of finished tasks: " + finishedTasks;
   finishedTasksElement.classList.add("bold");
-     
- // Add the new statistics elements to the statistics container
+
+  // Add the new statistics elements to the statistics container
   statisticsContainer.appendChild(numTasksElement);
   statisticsContainer.appendChild(finishedTasksElement);
- }
+}
 
- // Event listener for selecting algorithms
+// Event listener for selecting algorithms
 algorithmsContainer.forEach((radioButton) => {
   radioButton.addEventListener("change", () => {
     // Stop the scheduling function here
