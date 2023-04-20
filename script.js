@@ -140,7 +140,7 @@ async function animateTask(task) {
     taskDiv.runTime = taskDiv.querySelector("div.runTime");
     taskDiv.classList.add("running");
     while (task.oldTime !== task.timeRequired) {
-        taskDiv.runTime.textContent = "Time left: " + --task.oldTime + "s";
+        taskDiv.runTime.textContent = "Time left: " + --task.oldTime + "TU";
         await sleep(20);
     }
     taskDiv.classList.remove("running");
@@ -208,7 +208,7 @@ function generateDiv(task) {
     name.innerText = task.name;
     const runTime = document.createElement("div");
     runTime.classList.add("runTime");
-    runTime.innerText = "Duration: " + task.timeRequired + "s";
+    runTime.innerText = "Duration: " + task.timeRequired + "TU";
     const priority = document.createElement("div");
     priority.classList.add("priority");
     priority.innerText = "Priority: " + task.priority;
