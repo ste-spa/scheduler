@@ -140,14 +140,14 @@ async function animateTask(task) {
     taskDiv.runTime = taskDiv.querySelector("div.runTime");
     taskDiv.classList.add("running");
     while (task.oldTime !== task.timeRequired) {
-        taskDiv.runTime.textContent = "Time left: " + --task.oldTime + "s";
+        taskDiv.runTime.textContent = "Time left: " + --task.oldTime + "TU";
         await sleep(20);
     }
     taskDiv.classList.remove("running");
     if (task.timeRequired === 0) {
         await finishTaskAnimation(taskDiv);
     }
-    updateStatistics(statisticsContainer);
+    updateStatistics();
 }
 
 // Trigger Div remove animations
@@ -183,6 +183,7 @@ async function generateTasks(numTasks = 1) {
         generateDiv(task);
         await sleep(20);
     }
+    updateStatistics();
 }
 
 function showTasks() {
@@ -207,7 +208,7 @@ function generateDiv(task) {
     name.innerText = task.name;
     const runTime = document.createElement("div");
     runTime.classList.add("runTime");
-    runTime.innerText = "Duration: " + task.timeRequired + "s";
+    runTime.innerText = "Duration: " + task.timeRequired + "TU";
     const priority = document.createElement("div");
     priority.classList.add("priority");
     priority.innerText = "Priority: " + task.priority;
@@ -241,14 +242,12 @@ resetButton.addEventListener("click", function () {
     tasksContainer.innerHTML = "";
 
     // Reset the statistics container
-    document.getElementById("finished-tasks").textContent = "0";
-    statisticsContainer.classList.remove("hidden");
-    enableStartButton();
     updateStatistics();
+    enableStartButton();
 });
 
 // Function to update the statistics
-function updateStatistics(statisticsContainer) {
+function updateStatistics() {
     // Clear the statistics container
     statisticsContainer.innerHTML = "";
     // Create new statistics elements
@@ -296,3 +295,5 @@ async function enableStartButton() {
 readmeButton.addEventListener("click", function () {
     window.open("readme.html", "_blank");
 });
+
+window.addEventListener('load', updateStatistics());
