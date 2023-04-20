@@ -147,7 +147,7 @@ async function animateTask(task) {
     if (task.timeRequired === 0) {
         await finishTaskAnimation(taskDiv);
     }
-    updateStatistics(statisticsContainer);
+    updateStatistics();
 }
 
 // Trigger Div remove animations
@@ -183,6 +183,7 @@ async function generateTasks(numTasks = 1) {
         generateDiv(task);
         await sleep(20);
     }
+    updateStatistics();
 }
 
 function showTasks() {
@@ -241,14 +242,12 @@ resetButton.addEventListener("click", function () {
     tasksContainer.innerHTML = "";
 
     // Reset the statistics container
-    document.getElementById("finished-tasks").textContent = "0";
-    statisticsContainer.classList.remove("hidden");
-    enableStartButton();
     updateStatistics();
+    enableStartButton();
 });
 
 // Function to update the statistics
-function updateStatistics(statisticsContainer) {
+function updateStatistics() {
     // Clear the statistics container
     statisticsContainer.innerHTML = "";
     // Create new statistics elements
@@ -296,3 +295,5 @@ async function enableStartButton() {
 readmeButton.addEventListener("click", function () {
     window.open("readme.html", "_blank");
 });
+
+window.addEventListener('load', updateStatistics());
