@@ -252,7 +252,7 @@ function updateStatistics() {
     statisticsContainer.innerHTML = "";
     // Create new statistics elements
     const numTasksElement = document.createElement("p");
-    numTasksElement.textContent = "Number of tasks: " + tasks.length;
+    numTasksElement.textContent = "Number of pending tasks: " + tasks.length;
     numTasksElement.classList.add("bold");
     const numNotStartedTasksElement = document.createElement("p");
     numNotStartedTasksElement.textContent = "Number of not started tasks: " + notStartedTasks;
